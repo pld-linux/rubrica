@@ -1,7 +1,7 @@
 Summary:	Address book application
 Summary(pl):	Ksi±¿ka adresowa
 Name:		rubrica
-Version:	0.9.9.85
+Version:	0.9.9.90
 Release:	1
 License:	GPL
 Group:		X11/Applications
