@@ -1,12 +1,12 @@
 Summary:	Address book application
 Summary(pl):	Ksi±¿ka adresowa
 Name:		rubrica
-Version:	1.0.1
+Version:	1.0.3.1
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://digilander.libero.it/nfragale/download/%{name}/%{name}-%{version}.tar.bz2
-# Source0-md5:	72c5d78e7f69465bb481ad09fa9093f0
+# Source0-md5:	8c419c141fdb16278b71e79030671fa7
 URL:		http://digilander.libero.it/nfragale/index_gb.html
 BuildRequires:	autoconf
 BuildRequires:	automake
