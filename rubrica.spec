@@ -58,5 +58,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_sysconfdir}/gconf/schemas/*
 %{_datadir}/%{name}
-%{_datadir}/applications/*
+%{_desktopdir}/*
 %{_pixmapsdir}/%{name}
