@@ -36,13 +36,13 @@ ksi±¿ki adresowe z GnomeCard i eksportowaæ do HTML-a.
 
 %prep
 %setup -q
-#%patch0 -p1
+%patch0 -p1
 
 %build
-#%{__aclocal}
-#%{__autoconf}
-#%{__autoheader}
-#%{__automake}
+%{__aclocal}
+%{__autoheader}
+%{__autoconf}
+%{__automake}
 %configure
 %{__make}
 
