@@ -1,17 +1,17 @@
 Summary:	Address book application
 Summary(pl):	Ksi±¿ka adresowa
 Name:		rubrica
-Version:	1.0.3.1
-Release:	2
+Version:	1.1.40
+Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://digilander.libero.it/nfragale/download/%{name}/%{name}-%{version}.tar.bz2
-# Source0-md5:	8c419c141fdb16278b71e79030671fa7
+# Source0-md5:	7b9ef08cfbd8893e94bda1cae296618d
 URL:		http://digilander.libero.it/nfragale/index_gb.html
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libgnomeui-devel >= 2.3.3.1-2
-BuildRequires:	rpm-build >= 4.1-7
+BuildRequires:	libgnomeui-devel >= 2.4.0
+BuildRequires:	rpm-build >= 4.1-10
 Requires(post):	GConf2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
