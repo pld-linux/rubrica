@@ -2,7 +2,7 @@ Summary:	Address book application
 Summary(pl):	Ksi±¿ka adresowa
 Name:		rubrica
 Version:	1.0.3.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications
 Source0:	http://digilander.libero.it/nfragale/download/%{name}/%{name}-%{version}.tar.bz2
@@ -10,7 +10,7 @@ Source0:	http://digilander.libero.it/nfragale/download/%{name}/%{name}-%{version
 URL:		http://digilander.libero.it/nfragale/index_gb.html
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libgnomeui-devel >= 2.0.5
+BuildRequires:	libgnomeui-devel >= 2.3.3.1-2
 BuildRequires:	rpm-build >= 4.1-7
 Requires(post):	GConf2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -42,7 +42,8 @@ ksi±¿ki adresowe z GnomeCard i eksportowaæ do HTML-a.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %find_lang %{name} --all-name
 
