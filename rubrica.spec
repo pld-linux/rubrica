@@ -11,6 +11,7 @@ URL:		http://digilander.libero.it/nfragale/index_gb.html
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libgnomeui-devel >= 2.0.5
+BuildRequires:	rpm-build >= 4.1-7
 Requires(post):	GConf2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
