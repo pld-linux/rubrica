@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://digilander.libero.it/nfragale/download/%{name}/%{name}-%{version}.tar.bz2
+# Source0-md5:	72c5d78e7f69465bb481ad09fa9093f0
 URL:		http://digilander.libero.it/nfragale/index_gb.html
 BuildRequires:	autoconf
 BuildRequires:	automake
