@@ -1,12 +1,11 @@
 Summary:	Address book application
 Summary(pl):	Ksi±¿ka adresowa
 Name:		rubrica
-Version:	0.9.9.8
+Version:	0.9.9.81
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://digilander.libero.it/nfragale/download/%{name}/%{name}-%{version}.tar.bz2
-Patch0:		%{name}-am.patch
 URL:		http://digilander.libero.it/nfragale/index_gb.html
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -14,10 +13,6 @@ BuildRequires:	libgnomeui-devel >= 2.0.5
 BuildRequires:	rpm-build >= 4.1-7
 Requires(post):	GConf2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
-%define		_sysconfdir	/etc/X11/GNOME2
 
 %description
 Rubrica is an address book written using GTK+ and GNOME. It allows you
@@ -37,13 +32,8 @@ ksi±¿ki adresowe z GnomeCard i eksportowaæ do HTML-a.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
-%{__aclocal}
-%{__autoheader}
-%{__autoconf}
-%{__automake}
 %configure
 %{__make}
 
@@ -67,4 +57,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_sysconfdir}/gconf/schemas/*
 %{_datadir}/%{name}
+%{_datadir}/applications/*
 %{_pixmapsdir}/%{name}
