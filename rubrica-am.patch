@@ -1,0 +1,70 @@
+--- rubrica-0.9.9.1.orig/Makefile.am	Fri Sep 13 19:48:36 2002
++++ rubrica-0.9.9.1/Makefile.am	Mon Sep 30 12:12:21 2002
+@@ -16,67 +16,3 @@
+ schemas__DATA = rubrica.schemas
+ 
+ EXTRA_DIST = TODO $(rubricadoc_DATA) $(schemas__DATA)
+-
+-
+-install-data-local:
+-
+-	@$(NORMAL_INSTALL)
+-
+-	if test -d $(srcdir)/export/stylesheet; then \
+-	  $(mkinstalldirs) $(datadir)/rubrica/stylesheet; \
+-	  for export in $(srcdir)/export/stylesheet/rub2*; do \
+-	    if test -f $$export; then \
+-	      $(INSTALL_DATA) $$export $(datadir)/rubrica/stylesheet; \
+-	    fi \
+-	  done \
+-	fi
+-
+-	if test -d $(srcdir)/export/script; then \
+-	  $(mkinstalldirs) $(datadir)/rubrica/script; \
+-	  for export in $(srcdir)/export/script/rub2*; do \
+-	    if test -f $$export; then \
+-	      $(INSTALL_SCRIPT) $$export $(datadir)/rubrica/script; \
+-	    fi \
+-	  done \
+-	fi
+-
+-	if test -d $(srcdir)/export/nautilus-script; then \
+-	  $(mkinstalldirs) $(datadir)/rubrica/nautilus-script; \
+-	  for export in $(srcdir)/export/nautilus-script/rubrica*; do \
+-	    if test -f $$export; then \
+-	      $(INSTALL_SCRIPT) $$export $(datadir)/rubrica/nautilus-script; \
+-	    fi \
+-	  done \
+-	fi
+-
+-	$(mkinstalldirs) $(datadir)/gnome/apps/Applications; \
+-        if test -f rubrica.desktop; then \
+-        $(INSTALL_DATA) rubrica.desktop $(datadir)/gnome/apps/Applications; \
+-	fi 
+-
+-install-schemas: $(schemas__DATA)
+-	gconftool --shutdown
+-	GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) gconftool --makefile-install-rule $(schemas_dir)/$(schemas__DATA)
+-
+-uninstall-local:
+-	@$(NORMAL_UNINSTALL)
+-	rm -f -r $(datadir)/pixmaps/${PACKAGE}
+-	rm -f -r $(datadir)/${PACKAGE}
+-	rm -f $(datadir)/gnome/apps/Applications/rubrica.desktop
+-	rm -f -r $(datadir)/gnome/apps/gnome/help/${PACKAGE}
+-
+-dist-hook:
+-	if test -d pixmaps; then \
+-	  mkdir $(distdir)/pixmaps/rubrica; \
+-	  for pixmap in pixmaps/*; do \
+-	    if test -f $$pixmap; then \
+-	      cp -p $$pixmap $(distdir)/pixmaps/rubrica; \
+-	    fi \
+-	  done \
+-	fi
+-
+-
+-
+-
+-
+-
