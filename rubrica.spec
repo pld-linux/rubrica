@@ -41,7 +41,7 @@ ksi±¿ki adresowe z GnomeCard i eksportowaæ do HTML-a.
 %build
 %{__aclocal}
 %{__autoconf}
-autoheader
+%{__autoheader}
 %{__automake}
 %configure
 %{__make}
