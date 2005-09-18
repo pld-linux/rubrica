@@ -1,16 +1,17 @@
 Summary:	Address book application
 Summary(pl):	Ksi±¿ka adresowa
 Name:		rubrica
-Version:	1.1.40
+Version:	1.1.60
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://digilander.libero.it/nfragale/download/%{name}/%{name}-%{version}.tar.bz2
-# Source0-md5:	7b9ef08cfbd8893e94bda1cae296618d
-URL:		http://digilander.libero.it/nfragale/index_gb.html
+Source0:	http://download.berlios.de/%{name}/%{name}-%{version}.tar.gz
+# Source0-md5:	19e2c79b6ec9912b3bc48fb15f93d8bd
+URL:		http://rubrica.berlios.de
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libgnomeui-devel >= 2.4.0
+BuildRequires:	libral-devel >= 0.50
 BuildRequires:	rpm-build >= 4.1-10
 Requires(post):	GConf2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -55,9 +56,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc README ChangeLog NEWS TODO AUTHORS doc/examples.rub
+%doc README ChangeLog NEWS TODO AUTHORS
 %attr(755,root,root) %{_bindir}/*
-%{_sysconfdir}/gconf/schemas/*
 %{_datadir}/%{name}
 %{_desktopdir}/*
-%{_pixmapsdir}/%{name}
+%{_pixmapsdir}/%{name}.png
