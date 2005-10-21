@@ -3,9 +3,9 @@ Summary(pl):	Ksi±¿ka adresowa
 Name:		rubrica
 Version:	1.1.40
 Release:	1
-License:	GPL
+License:	GPL v2
 Group:		X11/Applications
-Source0:	http://digilander.libero.it/nfragale/download/%{name}/%{name}-%{version}.tar.bz2
+Source0:	http://digilander.libero.it/nfragale/download/rubrica/%{name}-%{version}.tar.bz2
 # Source0-md5:	7b9ef08cfbd8893e94bda1cae296618d
 URL:		http://digilander.libero.it/nfragale/index_gb.html
 BuildRequires:	autoconf
@@ -55,7 +55,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc README ChangeLog NEWS TODO AUTHORS doc/examples.rub
+%doc AUTHORS ChangeLog README doc/examples.rub
 %attr(755,root,root) %{_bindir}/*
 %{_sysconfdir}/gconf/schemas/*
 %{_datadir}/%{name}
