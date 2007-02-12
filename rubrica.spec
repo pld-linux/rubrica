@@ -1,5 +1,5 @@
 Summary:	Address book application
-Summary(pl):	Ksi±¿ka adresowa
+Summary(pl.UTF-8):   KsiÄ…Å¼ka adresowa
 Name:		rubrica
 Version:	1.1.40
 Release:	1
@@ -23,13 +23,13 @@ works, company infos, contact's assigment, etc.) and notes. XML is
 used to store the data. It can import addressbooks from GnomeCard and
 export to HTML.
 
-%description -l pl
-Rubrica to ksi±¿ka adresowa napisana z u¿yciem GTK+ i GNOME. Pozwala
-na dodawanie danych osobowych (imiê, nazwisko, adres itp.), odno¶ników
-WWW, adresów e-mail, numerów telefonów, informacji o pracy (firma, w
-której osoba pracuje, informacje o firmie itp.) oraz notatek. Do
-przechowywania danych u¿ywany jest XML. Aplikacja mo¿e importowaæ
-ksi±¿ki adresowe z GnomeCard i eksportowaæ do HTML-a.
+%description -l pl.UTF-8
+Rubrica to ksiÄ…Å¼ka adresowa napisana z uÅ¼yciem GTK+ i GNOME. Pozwala
+na dodawanie danych osobowych (imiÄ™, nazwisko, adres itp.), odnoÅ›nikÃ³w
+WWW, adresÃ³w e-mail, numerÃ³w telefonÃ³w, informacji o pracy (firma, w
+ktÃ³rej osoba pracuje, informacje o firmie itp.) oraz notatek. Do
+przechowywania danych uÅ¼ywany jest XML. Aplikacja moÅ¼e importowaÄ‡
+ksiÄ…Å¼ki adresowe z GnomeCard i eksportowaÄ‡ do HTML-a.
 
 %prep
 %setup -q
