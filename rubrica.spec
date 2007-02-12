@@ -1,5 +1,5 @@
 Summary:	Address book application
-Summary(pl.UTF-8):   Książka adresowa
+Summary(pl.UTF-8):	Książka adresowa
 Name:		rubrica
 Version:	1.1.40
 Release:	1
